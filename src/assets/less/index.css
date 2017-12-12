@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+html #app,
+body #app {
+  height: 100%;
+}
+html ul li,
+body ul li {
+  list-style: none;
+}
+html a,
+body a {
+  text-decoration: none;
+  color: #38817A;
+}
+html h1,
+body h1,
+html h2,
+body h2,
+html h3,
+body h3,
+html h4,
+body h4,
+html h5,
+body h5,
+html h6,
+body h6,
+html p,
+body p {
+  color: #33425B;
+}

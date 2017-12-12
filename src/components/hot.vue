@@ -1,9 +1,10 @@
 <template>
   <div id="hot">
-    <img src="../assets/images/product/1.jpg" alt="">
-    <group-title>{{ msg }}</group-title>
+    <group-title>
+      <h2>{{ msg }}</h2>
+    </group-title>
     <grid :cols="2">
-      <grid-item v-for="i in mun" :key="i.num">
+      <grid-item v-for="i in list" :key="i.id">
         <x-img
         :src="i.src"
          @on-success="success"
@@ -11,7 +12,7 @@
          >
          </x-img>
         <span>Loading</span>
-        <h3>{{ i.content }}</h3>
+        <p>{{ i.content }}</p>
       </grid-item>
     </grid>
   </div>
@@ -23,17 +24,16 @@ export default {
   data () {
     return {
       msg: '热门',
-      mun: [
-        {'num': 1, 'src': '../assets/images/product/1.jpg', 'content': '11'},
-        {'num': 2, 'src': '../assets/images/product/2.jpg', 'content': '22'},
-        {'num': 3, 'src': '../assets/images/product/3.jpg', 'content': '33'},
-        {'num': 4, 'src': '../assets/images/product/4.jpg', 'content': '44'}
+      list: [
+        {'id': 1, 'src': 'http://mycdn.lgwow.com/img/product/sample.jpg', 'content': '热门电影'},
+        {'id': 2, 'src': 'http://mycdn.lgwow.com/img/product/sample.jpg', 'content': '热门音乐'},
+        {'id': 3, 'src': 'http://mycdn.lgwow.com/img/product/sample.jpg', 'content': '热门商品'},
+        {'id': 4, 'src': 'http://mycdn.lgwow.com/img/product/sample.jpg', 'content': '热门游戏'}
       ]
     }
   },
   methods: {
     success (src, ele) {
-      console.log('success load', src)
       const span = ele.parentNode.querySelector('span')
       ele.parentNode.removeChild(span)
     },
