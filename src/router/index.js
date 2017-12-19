@@ -7,6 +7,11 @@ import news from '../components/new'
 import hot from '../components/hot'
 import Order from '../pages/order'
 import all from '../components/all'
+import Support from '../pages/support'
+import Help from '../pages/help'
+import Message from '../pages/message'
+import Address from '../pages/address'
+import Pending from '../pages/pending'
 
 Vue.use(Router)
 
@@ -42,6 +47,26 @@ export default new Router({
     {
       path: '/order',
       component: Order
+    },
+    {
+      path: '/support',
+      component: Support
+    },
+    {
+      path: '/help',
+      component: Help
+    },
+    {
+      path: '/message',
+      component: Message
+    },
+    {
+      path: '/address',
+      component: Address
+    },
+    {
+      path: '/pending/:id',
+      component: Pending
     }
   ],
   scrollBehavior (to, from, savedPosition) {

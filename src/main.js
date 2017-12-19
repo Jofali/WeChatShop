@@ -4,11 +4,10 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
-import store from './state'
+import store from './store'
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
-
 router.beforeEach(function (to, from, next) {
   next()
 })

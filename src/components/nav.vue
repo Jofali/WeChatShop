@@ -11,7 +11,7 @@
         <img slot="icon-active" src="../assets/images/icon/sort-active.png" alt="">
         <span slot="label">{{ items[1] }}</span>
       </tabbar-item>
-      <tabbar-item :show-dot="isDot" @on-item-click="onItemClick" link="/user">
+      <tabbar-item link="/user" :show-dot="isDot">
         <img slot="icon" src="../assets/images/icon/user.png" alt="">
         <img slot="icon-active" src="../assets/images/icon/user-active.png" alt="">
         <span slot="label">{{ items[2] }}</span>
@@ -21,22 +21,22 @@
 </template>
 
 <script>
-import { Tabbar, TabbarItem } from 'vux'
+import { Tabbar, TabbarItem, Badge } from 'vux'
 export default {
   data () {
     return {
-      items: ['主页', '分类', '用户中心'],
-      isDot: true
+      items: ['主页', '分类', '用户中心']
+    }
+  },
+  computed: {
+    isDot () {
+      return this.$store.state.seen
     }
   },
   components: {
     Tabbar,
-    TabbarItem
-  },
-  methods: {
-    onItemClick (index) {
-      this.isDot = false
-    }
+    TabbarItem,
+    Badge
   }
 }
 </script>
