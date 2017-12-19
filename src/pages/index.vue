@@ -5,9 +5,6 @@
     </div>
     <hot-list></hot-list>
     <new-list></new-list>
-    <divider>
-      <p>豫ICP备17025838号-1</p>
-    </divider>
   </div>
 </template>
 
@@ -18,7 +15,6 @@ import { Divider } from 'vux'
 export default {
   data () {
     return {
-      msg: ''
     }
   },
   components: {

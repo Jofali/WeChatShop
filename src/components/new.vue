@@ -11,7 +11,7 @@
          @on-success="success"
          @on-error="error"></x-img>
          <span>Loading</span>
-        <h3>{{ i.content }}</h3>
+        <p>{{ i.content }}</p>
       </grid-item>
     </grid>
   </div>

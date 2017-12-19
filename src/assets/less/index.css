@@ -1,12 +1,10 @@
 html,
 body {
-  height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 html #app,
 body #app {
-  height: 100%;
+  padding-bottom: 50px;
 }
 html ul li,
 body ul li {
@@ -32,4 +30,8 @@ body h6,
 html p,
 body p {
   color: #33425B;
+}
+html .weui-tabbar,
+body .weui-tabbar {
+  position: fixed;
 }

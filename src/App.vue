@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    <view-box ref="viewBox">
     <router-view></router-view>
     <nav-wechatshop slot="bottom"></nav-wechatshop>
-    </view-box>
+    <divider>
+      <p>豫ICP备17025838号-1</p>
+    </divider>
   </div>
 </template>
 
 <script>
 import nav from './components/nav'
-import { ViewBox } from 'vux'
+import { Divider } from 'vux'
+
 export default {
   name: 'app',
   components: {
     'nav-wechatshop': nav,
-    ViewBox
+    Divider
   }
 }
 </script>
