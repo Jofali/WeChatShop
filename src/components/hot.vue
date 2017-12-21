@@ -3,18 +3,20 @@
     <group-title>
       <h2>{{ msg }}</h2>
     </group-title>
-    <grid :cols="2">
-      <grid-item v-for="i in list" :key="i.id">
-        <x-img
-        :src="i.src"
-         @on-success="success"
-         @on-error="error"
-         >
-         </x-img>
-        <span>Loading</span>
-        <p>{{ i.content }}</p>
-      </grid-item>
-    </grid>
+      <grid :cols="2">
+        <grid-item v-for="i in list" :key="i.id">
+          <router-link :to="'/product/' + i.id">
+            <x-img
+            :src="i.src"
+            @on-success="success"
+            @on-error="error"
+            >
+            </x-img>
+            <span>Loading</span>
+            <p>{{ i.content }}</p>
+          </router-link>
+        </grid-item>
+      </grid>
   </div>
 </template>
 

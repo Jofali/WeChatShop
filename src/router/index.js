@@ -12,6 +12,8 @@ import Help from '../pages/help'
 import Message from '../pages/message'
 import Address from '../pages/address'
 import Pending from '../pages/pending'
+import EditAddress from '../pages/addnewaddress'
+import Product from '../pages/product/product'
 
 Vue.use(Router)
 
@@ -67,6 +69,14 @@ export default new Router({
     {
       path: '/pending/:id',
       component: Pending
+    },
+    {
+      path: '/editaddress/:tid',
+      component: EditAddress
+    },
+    {
+      path: '/product/:pid',
+      component: Product
     }
   ],
   scrollBehavior (to, from, savedPosition) {

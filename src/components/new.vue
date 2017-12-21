@@ -5,13 +5,15 @@
     </group-title>
     <grid :cols="2">
       <grid-item v-for="i in list" :key="i.id">
-        <x-img
-        :offset="1000"
-        :src="i.src"
-         @on-success="success"
-         @on-error="error"></x-img>
-         <span>Loading</span>
-        <p>{{ i.content }}</p>
+        <router-link :to="'/product/' + i.id">
+          <x-img
+          :offset="1000"
+          :src="i.src"
+          @on-success="success"
+          @on-error="error"></x-img>
+          <span>Loading</span>
+          <p>{{ i.content }}</p>
+        </router-link>
       </grid-item>
     </grid>
   </div>
@@ -24,14 +26,14 @@ export default {
     return {
       msg: '最新',
       list: [
-        {'id': 1, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新电影'},
-        {'id': 2, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新音乐'},
-        {'id': 3, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新商品'},
-        {'id': 4, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新游戏'},
-        {'id': 5, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新家具'},
-        {'id': 6, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新美妆'},
-        {'id': 7, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新服饰'},
-        {'id': 8, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新保健'}
+        {'id': 5, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新电影'},
+        {'id': 6, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新音乐'},
+        {'id': 7, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新商品'},
+        {'id': 8, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新游戏'},
+        {'id': 9, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新家具'},
+        {'id': 10, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新美妆'},
+        {'id': 11, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新服饰'},
+        {'id': 12, 'src': 'http://mycdn.lgwow.com/img/product/sample-new.jpg', 'content': '最新保健'}
 
       ]
     }

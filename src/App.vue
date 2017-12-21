@@ -2,7 +2,7 @@
   <div id="app">
     <router-view></router-view>
     <nav-wechatshop slot="bottom"></nav-wechatshop>
-    <divider>
+    <divider class="beian">
       <p>豫ICP备17025838号-1</p>
     </divider>
   </div>
