@@ -57,6 +57,7 @@ export default {
 <style lang="less" scoped>
   #address {
     height: 100%;
+    padding-bottom: 50%;
     .address-header{
       padding: 20% 0;
       background: #F9F8EB;

@@ -109,7 +109,7 @@ export default {
       }
     }
     .add-footer-default{
-      width: 30%;
+      width: 40%;
        float: left;
       .default-item {
         border: 1px solid #ccc;
@@ -117,7 +117,7 @@ export default {
       }
       .default-item-selected{
         border-color: #33425B;
-        background: url('../assets/images/icon/select.png') no-repeat top right;
+        background: url('http://mycdn.lgwow.com/img/icon/select.png') no-repeat top right;
       }
     }
   }

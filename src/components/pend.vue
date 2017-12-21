@@ -24,7 +24,13 @@
     <div class="pend-footer">
       <ul>
         <li v-for="(list, index) in footer" :key="index">
-          <x-button class="diy-button" :type="list.style" :text="list.text" action-type="button" link="/"></x-button>
+          <x-button 
+            class="diy-button" 
+            :type="list.style" 
+            :text="list.text" 
+            action-type="button" 
+            link="/">
+            </x-button>
         </li>
       </ul>
     </div>
@@ -111,7 +117,7 @@ export default {
   }
   ul{
     li{
-      width: 25%;
+      width: 30%;
       margin-left: 10px;
       float: right;
       .diy-button{
